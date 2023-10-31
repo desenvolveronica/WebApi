@@ -17,7 +17,7 @@ namespace WebApi.Infraestrutura
         }
         public Employee? Get(int id)
         {
-            return _contexto.Employees.Find(id);
+            return _contexto.Employees.Find(id);//find para encontrar
         }
     }
 }

@@ -19,7 +19,7 @@ namespace WebApi.Controllers
         {
             var filePhath = Path.Combine("Storage", employeeView.Photo.FileName);
             using Stream fileStreen = new FileStream(filePhath, FileMode.Create);//Stream permite que salve na memória e que depois pegue e coloque em alguma pasta do sistema
-            employeeView.Photo.CopyTo(fileStreen);
+            employeeView.Photo.CopyTo(fileStreen);//copia a foto para dentro do fileStreen
 
             var employee = new Employee(employeeView.Name, employeeView.Age, filePhath);
             _employeeRepository.Add(employee);
