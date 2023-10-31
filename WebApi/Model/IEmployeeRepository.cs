@@ -1,4 +1,5 @@
-﻿namespace WebApi.Model
+﻿//criação de interface para implementar o padrão REPOSITORY
+namespace WebApi.Model
 {
     public interface IEmployeeRepository
     {

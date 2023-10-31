@@ -10,7 +10,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();
+builder.Services.AddTransient<IEmployeeRepository, EmployeeRepository>();//a interface IEmployeeRepository vai implementar o EmployeeRepository
+//adicionar a injeção de dependência
 
 var app = builder.Build();
 

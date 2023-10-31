@@ -4,7 +4,7 @@ namespace WebApi.Infraestrutura
 {
     public class EmployeeRepository : IEmployeeRepository
     {
-        private readonly ConnectionContext _contexto = new ConnectionContext();
+        private readonly ConnectionContext _contexto = new ConnectionContext(); //chamando a classe do ConnectionContext
         public void Add(Employee employee)
         {
             _contexto.Employees.Add(employee);
