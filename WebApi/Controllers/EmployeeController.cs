@@ -15,14 +15,14 @@ namespace WebApi.Controllers
             _employeeRepository = employeeRepository ?? throw new ArgumentNullException(nameof(employeeRepository));//variávl da interface
         }
         [HttpPost]
-        public IActionResult Add(EmployeeViewModel employeeView)//parâmetros são passados pela classe EmployeeViewModel 
+        public IActionResult Add([FromForm] EmployeeViewModel employeeView)//parâmetros são passados pela classe EmployeeViewModel 
         {
             var employee = new Employee(employeeView.Name, employeeView.Age, null);
             _employeeRepository.Add(employee);
             return Ok();
         }
         [HttpGet]
-        public IActionResult Get([FromQuery] EmployeeViewModel employeeView)
+        public IActionResult Get()
         {
             var employess = _employeeRepository.Get();
             return Ok(employess);
